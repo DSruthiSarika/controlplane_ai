@@ -21,8 +21,6 @@ These evaluations are combined into a **risk score** and **confidence score**, f
 
 The platform also maintains an auditable record of governance decisions and provides a **human-in-the-loop workflow** for responses that require additional review.
 
-Built for the **Accenture Innovation Challenge 2026 – Prototype Development Round**.
-
 ---
 
 ## 🎯 Problem
@@ -124,6 +122,7 @@ Finance
 Healthcare
 HR
 General
+
 2. AI Response Generation
 
 The platform generates a response using the built-in local demo response generator.
@@ -140,12 +139,14 @@ Application Context
 Cost
 Knowledge Grounding
 Policy Compliance
+
 4. Risk Evaluation
 
 The six risk results are aggregated into:
 
 Total Risk Score
 Overall Risk Level
+
 5. Confidence Evaluation
 
 The Confidence Engine converts the governance results into a score between 0 and 100.
@@ -159,6 +160,7 @@ Decision	Meaning
 🟡 WARN	Response can proceed with elevated risk
 🟠 HUMAN REVIEW	Human approval is required
 🔴 BLOCK	Response should not be released
+
 7. Audit Logging
 
 Every evaluation is stored in a local SQLite database.
@@ -183,6 +185,7 @@ Overall Risk
 Governance Decision
 Reason
 Timestamp
+
 8. Human-in-the-Loop
 
 Responses requiring human intervention appear in the Human Review queue.
@@ -196,7 +199,9 @@ A reviewer can inspect the complete analysis and make the final decision:
           ▼               ▼
       ✅ APPROVE       🚫 BLOCK
        RESPONSE        RESPONSE
+
 ✨ Key Capabilities
+
 🧠 Multi-Dimensional Risk Analysis
 
 ControlPlane.ai does not rely on a single risk signal.
@@ -209,6 +214,7 @@ Application Context
 Cost
 Knowledge Grounding
 Policy Compliance
+
 📚 Knowledge Grounding
 
 The Knowledge Base Engine loads trusted organizational documents from:
@@ -227,6 +233,7 @@ Personally identifiable information
 Toxic language
 Bias-indicator phrasing
 Unsafe policy-related phrases
+
 🏢 Application Context Awareness
 
 The Context Engine evaluates risk based on the selected application context.
@@ -238,6 +245,7 @@ Finance
 Healthcare
 HR
 General
+
 💰 Cost Risk
 
 The Cost Engine estimates response usage and evaluates it against configured thresholds.
@@ -251,6 +259,7 @@ The prototype supports:
 Context-specific policy checks
 Global critical-safety rules
 Restricted-term detection
+
 📊 Confidence Scoring
 
 The Confidence Engine converts governance results into a 0–100 confidence score.
@@ -270,6 +279,7 @@ Review the confidence score
 Review the automated decision
 Approve the response
 Block the response
+
 🧾 Auditable Governance
 
 Every evaluation is stored in SQLite.
@@ -279,6 +289,7 @@ The platform provides dedicated interfaces for:
 Risk Dashboard
 Audit Logs
 Human Review
+
 🏗️ Architecture
 Component	Responsibility
 ResponseGenerator	Generates the response to be governed — local demo generator by default, with an optional real-LLM path
@@ -292,6 +303,7 @@ RiskEngine	Aggregates the six risk dimensions into a total risk score and overal
 ConfidenceEngine	Converts governance risk results into a 0–100 confidence score
 DecisionEngine	Applies policy-first and risk-based rules to determine the final governance decision
 database/db.py	Maintains the SQLite audit log and human-review state
+
 📂 Project Structure
 controlplane_ai/
 │
@@ -337,7 +349,9 @@ controlplane_ai/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
 🖥️ Application Modules
+
 🏠 Overview
 
 Provides a high-level view of the ControlPlane.ai governance platform.
@@ -369,6 +383,7 @@ Confidence
 Decision
  ↓
 Audit Log
+
 📊 Risk Dashboard
 
 The Risk Dashboard provides an overview of historical governance evaluations.
@@ -388,6 +403,7 @@ Confidence
 Decision
 Reason
 Timestamp
+
 👤 Human Review
 
 The Human Review interface displays cases requiring manual governance approval.
@@ -397,6 +413,7 @@ Reviewers can inspect the complete evaluation and choose:
 ALLOW
   or
 BLOCK
+
 ⚙️ Requirements
 
 The project requires:
@@ -413,6 +430,7 @@ requirements.txt
 No external API key is required to run the default prototype.
 
 🚀 Installation
+
 1. Clone the Repository
 git clone https://github.com/DSruthiSarika/controlplane_ai.git
 
@@ -470,7 +488,9 @@ Live Simulator
 Risk Dashboard
 Audit Logs
 Human Review
+
 🛠️ Troubleshooting
+
 Streamlit Cannot Find a Module
 
 If you see an error such as:
@@ -636,44 +656,7 @@ Audit Logging
 
 This architecture demonstrates a practical approach to responsible, explainable and auditable AI governance.
 
-🏆 Accenture Innovation Challenge
-
-ControlPlane.ai was developed as a prototype for the:
-
-Accenture Innovation Challenge 2026
-Prototype Development Round
-
-The project focuses on the governance problem created by the increasing adoption of Generative AI in enterprise workflows.
-
-The prototype demonstrates how an AI governance control layer can:
-
-Evaluate
-   ↓
-Understand Risk
-   ↓
-Check Policies
-   ↓
-Measure Confidence
-   ↓
-Make a Decision
-   ↓
-Log the Decision
-   ↓
-Escalate When Necessary
-
-The central idea is to move from:
-
-AI that only generates responses
-
-to:
-
-AI systems that generate, evaluate, govern and audit responses before release.
-
-👥 Team
-ControlPlane.ai Team
-
-Built for the Accenture Innovation Challenge 2026.
-
-📄 License
-
-This project is a prototype developed for educational, innovation challenge and demonstration purposes.
+👥 Team Sentinel
+Digumurthy Sruthi Sarika
+Nithya R
+Khushi Kumari
