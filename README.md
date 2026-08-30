@@ -107,6 +107,12 @@ ControlPlane.ai Workflow
 
 The objective is to make AI responses evaluated, controlled and auditable before release.
 
+🎥 Prototype Demonstration
+
+Watch the ControlPlane.ai prototype in action, demonstrating the complete AI governance workflow — from AI response generation and six-dimensional risk analysis to confidence scoring, governance decisions, human review, and audit logging.
+
+▶️ Watch the Prototype Demo
+
 🔄 How It Works
 
 Every AI response passes through a multi-stage governance workflow.
