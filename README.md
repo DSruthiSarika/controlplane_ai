@@ -155,11 +155,11 @@ The Confidence Engine converts the governance results into a score between 0 and
 
 The Decision Engine applies policy-first and risk-based rules to produce one of four outcomes:
 
-Decision	Meaning
-🟢 ALLOW	Response passes governance checks
-🟡 WARN	Response can proceed with elevated risk
-🟠 HUMAN REVIEW	Human approval is required
-🔴 BLOCK	Response should not be released
+Decision	      Meaning
+🟢 ALLOW	      Response passes governance checks
+🟡 WARN	      Response can proceed with elevated risk
+🟠 HUMAN REVIEW     Human approval is required
+🔴 BLOCK	      Response should not be released
 
 7. Audit Logging
 
@@ -291,18 +291,18 @@ Audit Logs
 Human Review
 
 🏗️ Architecture
-Component	Responsibility
-ResponseGenerator	Generates the response to be governed — local demo generator by default, with an optional real-LLM path
-PerformanceEngine	Estimates hallucination/reliability risk using TF-IDF and cosine similarity against trusted knowledge
-ResponsibleAIEngine	Detects configured responsible-AI risk patterns including PII, toxic language, bias indicators and unsafe phrases
-ContextEngine	Evaluates risk based on the selected application context
-CostEngine	Estimates response cost using configured token/cost thresholds
-KnowledgeBase	Loads trusted .txt documents and ranks them against the user query
-PolicyEngine	Evaluates responses against context-specific and global policy rules
-RiskEngine	Aggregates the six risk dimensions into a total risk score and overall risk level
-ConfidenceEngine	Converts governance risk results into a 0–100 confidence score
-DecisionEngine	Applies policy-first and risk-based rules to determine the final governance decision
-database/db.py	Maintains the SQLite audit log and human-review state
+Component	         Responsibility
+ResponseGenerator   -  Generates the response to be governed — local demo generator by default, with an optional real-LLM path
+PerformanceEngine   -  Estimates hallucination/reliability risk using TF-IDF and cosine similarity against trusted knowledge
+ResponsibleAIEngine -  Detects configured responsible-AI risk patterns including PII, toxic language, bias indicators and unsafe phrases
+ContextEngine	      -  Evaluates risk based on the selected application context
+CostEngine          -  Estimates response cost using configured token/cost thresholds
+KnowledgeBase	      -  Loads trusted .txt documents and ranks them against the user query
+PolicyEngine        -  Evaluates responses against context-specific and global policy rules
+RiskEngine          -  Aggregates the six risk dimensions into a total risk score and overall risk level
+ConfidenceEngine    -  Converts governance risk results into a 0–100 confidence score
+DecisionEngine      -  Applies policy-first and risk-based rules to determine the final governance decision
+database/db.py      -  Maintains the SQLite audit log and human-review state
 
 📂 Project Structure
 controlplane_ai/
