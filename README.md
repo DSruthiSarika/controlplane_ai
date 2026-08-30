@@ -111,7 +111,9 @@ The objective is to make AI responses evaluated, controlled and auditable before
 
 Watch the ControlPlane.ai prototype in action, demonstrating the complete AI governance workflow — from AI response generation and six-dimensional risk analysis to confidence scoring, governance decisions, human review, and audit logging.
 
-▶️ [**Watch the Prototype Demo**](https://drive.google.com/file/d/1Og6Q1E1-Jdf8jcKkeqUW0d2-fo9i2JPZ/view?usp=sharing)
+▶️ [Watch the Prototype Demo](https://drive.google.com/file/d/1Og6Q1E1-Jdf8jcKkeqUW0d2-fo9i2JPZ/view)
+
+
 
 🔄 How It Works
 
