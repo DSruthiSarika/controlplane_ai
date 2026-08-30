@@ -301,20 +301,33 @@ Audit Logs
 Human Review
 
 🏗️ Architecture
+
 Component	         Responsibility
+
 ResponseGenerator   -  Generates the response to be governed — local demo generator by default, with an optional real-LLM path
+
 PerformanceEngine   -  Estimates hallucination/reliability risk using TF-IDF and cosine similarity against trusted knowledge
+
 ResponsibleAIEngine -  Detects configured responsible-AI risk patterns including PII, toxic language, bias indicators and unsafe phrases
+
 ContextEngine	      -  Evaluates risk based on the selected application context
+
 CostEngine          -  Estimates response cost using configured token/cost thresholds
+
 KnowledgeBase	      -  Loads trusted .txt documents and ranks them against the user query
+
 PolicyEngine        -  Evaluates responses against context-specific and global policy rules
+
 RiskEngine          -  Aggregates the six risk dimensions into a total risk score and overall risk level
+
 ConfidenceEngine    -  Converts governance risk results into a 0–100 confidence score
+
 DecisionEngine      -  Applies policy-first and risk-based rules to determine the final governance decision
+
 database/db.py      -  Maintains the SQLite audit log and human-review state
 
 📂 Project Structure
+```text
 controlplane_ai/
 │
 ├── app.py
@@ -359,6 +372,7 @@ controlplane_ai/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+```
 
 🖥️ Application Modules
 
@@ -377,7 +391,7 @@ System status
 ⚡ Live Simulator
 
 The Live Simulator allows users to submit queries and observe the complete governance workflow.
-
+```text
 Query
  ↓
 AI Response
@@ -393,6 +407,7 @@ Confidence
 Decision
  ↓
 Audit Log
+```
 
 📊 Risk Dashboard
 
@@ -648,6 +663,7 @@ These improvements can evolve the prototype toward a broader enterprise AI gover
 
 ControlPlane.ai brings multiple governance signals together into a single control layer instead of treating AI safety, reliability, policy compliance, cost and auditability as separate concerns.
 
+```text
 AI Response
      ↓
 Reliability + Responsible AI + Context
@@ -663,10 +679,13 @@ Governance Decision
 ALLOW / WARN / HUMAN REVIEW / BLOCK
      ↓
 Audit Logging
-
+```
 This architecture demonstrates a practical approach to responsible, explainable and auditable AI governance.
 
 👥 Team Sentinel
+
 Digumurthy Sruthi Sarika
+
 Nithya R
+
 Khushi Kumari
